@@ -6,7 +6,7 @@ CopyFiles is a python 2.7 script which preforms the following tasks:
 in settings.DESTINATION_DIRNAME with settings.SOURCE_DIRNAME 
 
 2. Zip all files in folder defined in settings.FOLDER_TO_ZIP and output zip file to 
-folder defined in settings.
+folder defined in settings.ZIP_FILE_DESTINATION
 
 
 * all configurations are to be made in settings.py script.
