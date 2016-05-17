@@ -11,4 +11,4 @@ folder defined in settings.ZIP_FILE_DESTINATION
 
 * all configurations are to be made in settings.py script.
 
-WaveSunOfLife©2016
+WaveSunOfLife ©2016
