@@ -8,7 +8,6 @@ import zipFiles
 # configurations from settings.py
 SOURCE_DIRNAME = settings.SOURCE_DIRNAME
 DESTINATION_DIRNAME = settings.DESTINATION_DIRNAME
-COMPRESSED_FILE_DESTINATION = settings.COMPRESSED_FILE_DESTINATION
 
 
 # Get all files from source folder (one level deep)
@@ -78,8 +77,11 @@ def erase_files_from_folder(path):
             shutil.rmtree(join(path, f))
 
 
-# Zip folders
-zipFiles.compress_to_zip(settings.SERVER_DIR, settings.COMPRESSED_FILE_DESTINATION, settings.COMPRESSED_FILE_NAME)
-
+# Handle files compilation
+# copy files and sub directories from settings.SOURCE_DIRNAME to settings.ZIP_FILE_NAME
 all_files = get_files_from_dir(SOURCE_DIRNAME)
 replace_files(DESTINATION_DIRNAME, SOURCE_DIRNAME, all_files)
+
+# Handle file compression
+# compress folder settings.FOLDER_TO_ZIP and output zip file to folder settings.ZIP_FILE_DESTINATION
+zipFiles.compress_to_zip(settings.FOLDER_TO_ZIP, settings.ZIP_FILE_DESTINATION, settings.ZIP_FILE_NAME)

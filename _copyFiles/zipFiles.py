@@ -24,8 +24,13 @@ def compress_to_zip(src, dst, file_name):
 
 
 def copy_zip_file(zip_file, src, destination):
+    # remove old zip file from destination folder
+    for f in os.listdir(destination):
+        if f == zip_file.filename:
+            os.remove(os.path.join(destination, zip_file.filename))
+
     # copy zip file from projects base folder
-    # to folder defined in settings.COMPRESSED_FILE_DESTINATION
+    # to folder defined in settings.ZIP_FILE_DESTINATION
     shutil.copy(os.path.join(src, zip_file.filename), destination)
     # remove zip file from project base folder
     os.remove(os.path.join(src, zip_file.filename))
