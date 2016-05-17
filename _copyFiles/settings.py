@@ -11,7 +11,7 @@ SOURCE_DIRNAME = ROOT_DIR + "\\public"
 DESTINATION_DIRNAME = ROOT_DIR + "\\destination"
 
 # Destination to drop zipped file
-COMPRESSED_FILE_DESTINATION = ROOT_DIR + "\\compressed_file_destination"
+COMPRESSED_FILE_DESTINATION = ROOT_DIR + "\\zip_file_destination"
 
 # Zipped filed name
 COMPRESSED_FILE_NAME = "custom_name_zipfile"
