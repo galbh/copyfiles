@@ -1,5 +1,8 @@
 import os
+import shutil
 import zipfile
+
+DIR = os.path.join(os.path.dirname(__file__))
 
 
 def compress_to_zip(src, dst, file_name):
@@ -11,9 +14,18 @@ def compress_to_zip(src, dst, file_name):
         for filename in files:
             absname = os.path.abspath(os.path.join(dirname, filename))
             arcname = absname[len(abs_src) + 1:]
-            print(arcname)
-            # print 'zipping %s as %s' % (os.path.join(dirname, filename),
-            #                             arcname)
-            zf.write(absname, arcname)
-    zf.close()
 
+            # print 'zipping %s as %s' % (os.path.join(dirname, filename),
+            #                             arcname)+zf.write(dst, arcname)
+            zf.write(absname, arcname)
+
+    zf.close()
+    copy_zip_file(zf, DIR, dst)
+
+
+def copy_zip_file(zip_file, src, destination):
+    # copy zip file from projects base folder
+    # to folder defined in settings.COMPRESSED_FILE_DESTINATION
+    shutil.copy(os.path.join(src, zip_file.filename), destination)
+    # remove zip file from project base folder
+    os.remove(os.path.join(src, zip_file.filename))
