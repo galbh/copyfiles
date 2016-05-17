@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.emc.nazgul.hub</groupId>
+        <artifactId>hub-parent</artifactId>
+        <version>0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>hub-webapp</artifactId>
+    <name>Hub Web App</name>
+
+    <dependencies>
+
+        <!-- site web api -->
+        <dependency>
+            <groupId>com.emc.nazgul.site</groupId>
+            <artifactId>site-web-api</artifactId>
+            <version>${nazgul.site.version}</version>
+        </dependency>
+
+        <!-- hub webapp api -->
+        <dependency>
+            <groupId>com.emc.nazgul.hub</groupId>
+            <artifactId>hub-webapp-java-web-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <!-- hub web api -->
+        <dependency>
+            <groupId>com.emc.nazgul.hub</groupId>
+            <artifactId>hub-java-web-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.emc.nazgul.jmsl.api</groupId>
+            <artifactId>jmsl-api</artifactId>
+            <version>${microservice.api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+        </dependency>
+    </dependencies>
+</project>
+
