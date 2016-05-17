@@ -7,7 +7,7 @@ DIR = os.path.join(os.path.dirname(__file__))
 
 def compress_to_zip(src, dst, file_name):
 
-    zf = zipfile.ZipFile(file_name+".tar", "w", zipfile.ZIP_DEFLATED)
+    zf = zipfile.ZipFile(file_name+".jar", "w", zipfile.ZIP_DEFLATED)
     abs_src = os.path.abspath(src)
 
     for dirname, subdirs, files in os.walk(src):
