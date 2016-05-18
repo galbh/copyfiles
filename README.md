@@ -9,6 +9,7 @@ in settings.DESTINATION_DIRNAME with settings.SOURCE_DIRNAME
 folder defined in settings.ZIP_FILE_DESTINATION
 
 
-* all configurations are to be made in settings.py script.
+* all configurations are to be made in settings.py 
+* files should not be in use while script activates
 
 WaveSunOfLife ©2016
