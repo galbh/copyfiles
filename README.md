@@ -11,5 +11,3 @@ folder defined in settings.ZIP_FILE_DESTINATION
 
 * all configurations are to be made in settings.py 
 * files should not be in use while script activates
-
-WaveSunOfLife ©2016
